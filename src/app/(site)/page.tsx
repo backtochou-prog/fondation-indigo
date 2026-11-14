@@ -24,7 +24,7 @@ export default async function Home() {
           <Image src="/brand/hero-indigo.jpg" alt="Un cœur ailé couronné d'or, au centre d'une galaxie indigo et violette" fill priority sizes="100vw" className="object-cover object-[50%_24%]" />
           <div aria-hidden="true" className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-night/60 to-transparent" />
         </div>
-        <div className="wrap relative -mt-20 pb-24 text-center md:-mt-20 md:pb-28">
+        <div className="wrap relative -mt-20 pb-24 text-center anim-ascend md:-mt-20 md:pb-28">
           <h1 className="t-display mx-auto max-w-[27ch] !text-[clamp(2.3rem,4.6vw,4.2rem)]">Et si vous n'aviez plus besoin de vous cacher pour être <span className="em-serif text-lavender">vous-même</span> ?</h1>
           <p className="t-lead mx-auto mt-5 max-w-xl text-star/90">Un lieu pour se rencontrer, s'écouter et retrouver sa place.</p>
           <div className="mt-9 flex flex-wrap justify-center gap-3">
