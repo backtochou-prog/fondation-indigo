@@ -32,7 +32,7 @@ export default async function Home() {
             <Link href="/devenir-mecene" className="btn btn-line">Soutenir notre mission</Link>
           </div>
           <StarRule className="mx-auto mt-12 max-w-md" />
-          <p className="mt-4 font-display text-xl italic text-lavender">L'Âme a sa Place.</p>
+          <p className="mt-4 font-display text-xl italic text-lavender">Votre âme a sa place.</p>
         </div>
       </section>
 
