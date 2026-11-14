@@ -118,6 +118,7 @@ export default async function Home() {
               <Reveal as="li" key={r} delay={i * 110} className={`font-display text-[clamp(2.4rem,7vw,6rem)] leading-[1.02] text-star ${i === 3 ? "em-serif mt-4 !text-gold" : ""}`}>{r}</Reveal>
             ))}
           </ul>
+          <div className="mt-12"><ArrowLink href="/notre-histoire#charte" className="text-star">Lire notre charte : nos 4 piliers</ArrowLink></div>
         </div>
       </section>
 

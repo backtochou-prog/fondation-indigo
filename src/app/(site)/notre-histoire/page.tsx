@@ -10,12 +10,12 @@ import { founderStory, promise } from "@/lib/story";
 export const metadata: Metadata = { title: "Notre histoire", description: "Une âme qui s'est toujours sentie différente décide de créer le lieu qu'elle aurait aimé trouver : Fondation Indigo, à Strasbourg." };
 export const revalidate = 300;
 
-const values = [
-  { t: "L'écoute sans jugement", d: "On vient comme on est. Personne n'a à justifier sa sensibilité." },
-  { t: "La singularité", d: "Être différent n'est pas un défaut à corriger, mais une manière d'être au monde." },
-  { t: "Le lien", d: "Rencontrer des personnes qui comprennent, sans pression ni performance." },
-  { t: "La douceur", d: "Un rythme lent, du thé, de la lumière : un lieu qui ne brusque pas." },
-  { t: "L'honnêteté", d: "Nous disons clairement ce que nous faisons — et ce que nous ne faisons pas." },
+/** Charte — Article 2. Texte d'origine de la fondation, repris tel quel (ne pas réécrire le fond). */
+const pillars = [
+  { t: "Pur et Authentique", d: "Nous disons vrai. Nous ne jouons pas un rôle. Nous accueillons avec le cœur, sans masque, sans promesse magique. Ce que nous ne savons pas, nous le disons. Ce que nous promettons, nous le faisons." },
+  { t: "Sans Jugement", d: "Ici, on ne te demandera pas de couper tes ailes pour rentrer dans une case. Tu peux venir comme tu es. Fatigué, triste, perdu, en colère, en éveil. Tu es bienvenu." },
+  { t: "Terre et Ciel", d: "Nous apprenons l'équilibre. Être relié au Ciel, aux étoiles, aux guides, aux anges, au Créateur, sans fuir la Terre. Être ancré, manger, dormir, travailler, aimer, tout en gardant sa lumière." },
+  { t: "Dignité et Sécurité", d: "Chaque âme est protégée. Notre Ancre Psy, notre référente bienveillance, veille sur le cadre. Pas de dépendance. Pas de gourou. Pas de promesse de guérison. Juste un cadre sûr, humain, éthique." },
 ];
 
 export default async function Histoire() {
@@ -81,19 +81,22 @@ export default async function Histoire() {
         </div>
       </section>
 
-      {/* Valeurs */}
-      <section className="bg-night-2 section">
+      {/* Charte — Article 2 */}
+      <section id="charte" className="bg-night-2 section scroll-mt-20">
         <div className="wrap">
-          <Reveal><Eyebrow className="text-lavender">Nos valeurs</Eyebrow></Reveal>
-          <ul className="mt-10 divide-y divide-lavender/20 border-y border-lavender/20">
-            {values.map((v, i) => (
-              <Reveal as="li" key={v.t} delay={i * 60} className="grid gap-2 py-7 md:grid-cols-[4rem_1fr_1.2fr] md:items-baseline md:gap-8">
-                <span className="font-display text-2xl text-lavender">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className="t-h3">{v.t}</h3>
-                <p>{v.d}</p>
+          <Reveal className="max-w-2xl">
+            <Eyebrow className="text-lavender">Notre charte · Article 2</Eyebrow>
+            <h2 className="t-h2 mt-5">Nos valeurs : nos 4 piliers.</h2>
+          </Reveal>
+          <ol className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-lavender/25 bg-lavender/25 md:grid-cols-2">
+            {pillars.map((v, i) => (
+              <Reveal as="li" key={v.t} delay={i * 80} className="bg-night p-8 md:p-10">
+                <p className="font-display text-5xl text-gold">{i + 1}</p>
+                <h3 className="t-h3 mt-4">{v.t}</h3>
+                <p className="mt-4 text-[1.02rem] leading-relaxed text-star/90">{v.d}</p>
               </Reveal>
             ))}
-          </ul>
+          </ol>
         </div>
       </section>
 
