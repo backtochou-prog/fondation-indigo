@@ -37,6 +37,23 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* 1 bis — TÉMOIGNAGE DE LA FONDATRICE */}
+      <section id="temoignage" className="section scroll-mt-20">
+        <div className="wrap-narrow">
+          <Reveal>
+            <Eyebrow className="text-lavender">Témoignage de la fondatrice</Eyebrow>
+            <p className="mt-4 text-sm text-mist/80">Ces mots sont ceux de la fondatrice, tirés de sa propre expérience. Ils ne constituent ni un enseignement ni une promesse pour les personnes qui viennent à la Fondation.</p>
+          </Reveal>
+          {testimony.map((stanza, i) => (
+            <div key={i} className="mt-10">
+              <p className="font-display text-[clamp(1.25rem,2vw,1.5rem)] italic leading-[1.55] text-star/95">
+                {stanza.map((line) => <span key={line} className="block">{line}</span>)}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* 2 — PHILOSOPHIE */}
       <section className="section">
         <div className="wrap grid gap-12 lg:grid-cols-[1fr_1.6fr] lg:gap-24">
@@ -63,23 +80,6 @@ export default async function Home() {
               <div className="mt-9"><ArrowLink href="/notre-histoire" className="text-star">Lire l'histoire en entier</ArrowLink></div>
             </Reveal>
           </div>
-        </div>
-      </section>
-
-      {/* 3 bis — TÉMOIGNAGE DE LA FONDATRICE */}
-      <section id="temoignage" className="section scroll-mt-20">
-        <div className="wrap-narrow">
-          <Reveal>
-            <Eyebrow className="text-lavender">Témoignage de la fondatrice</Eyebrow>
-            <p className="mt-4 text-sm text-mist/80">Ces mots sont ceux de la fondatrice, tirés de sa propre expérience. Ils ne constituent ni un enseignement ni une promesse pour les personnes qui viennent à la Fondation.</p>
-          </Reveal>
-          {testimony.map((stanza, i) => (
-            <div key={i} className="mt-10">
-              <p className="font-display text-[clamp(1.25rem,2vw,1.5rem)] italic leading-[1.55] text-star/95">
-                {stanza.map((line) => <span key={line} className="block">{line}</span>)}
-              </p>
-            </div>
-          ))}
         </div>
       </section>
 
