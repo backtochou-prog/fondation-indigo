@@ -74,11 +74,11 @@ export default async function Home() {
             <p className="mt-4 text-sm text-mist/80">Ces mots sont ceux de la fondatrice, tirés de sa propre expérience. Ils ne constituent ni un enseignement ni une promesse pour les personnes qui viennent à la Fondation.</p>
           </Reveal>
           {testimony.map((stanza, i) => (
-            <Reveal key={i} delay={i * 60} className="mt-10">
+            <div key={i} className="mt-10">
               <p className="font-display text-[clamp(1.25rem,2vw,1.5rem)] italic leading-[1.55] text-star/95">
                 {stanza.map((line) => <span key={line} className="block">{line}</span>)}
               </p>
-            </Reveal>
+            </div>
           ))}
         </div>
       </section>
